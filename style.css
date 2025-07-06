@@ -1,0 +1,292 @@
+/* ---  General & Root Styles --- */
+:root {
+    --primary-gold-start: #FFD700;
+    --primary-gold-end: #FFA500;
+    --accent-purple: #8A2BE2;
+    --bg-dark: #0F111A;
+    --surface-dark: #1A1D2C;
+    --surface-darker: #131520;
+    --text-light: #F0F8FF;
+    --text-muted: #A9A9A9;
+    --border-color: #2a2d41;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    background-image: radial-gradient(circle at 50% 0%, rgba(35, 39, 62, 0.5), transparent 60%);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn.large {
+    padding: 14px 32px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-gold-start), var(--primary-gold-end));
+    color: #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--border-color);
+}
+
+/* --- Header --- */
+.site-header {
+    background: rgba(15, 17, 26, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* --- Main Content --- */
+.site-main {
+    padding: 40px 0;
+}
+
+.hero-image-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+.hero-image-container img {
+    width: 100%;
+    display: block;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro-text h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(45deg, var(--primary-gold-start), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.action-panel.final-cta {
+    background-color: var(--surface-darker);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.final-cta h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.final-cta p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* --- Footer --- */
+.site-footer {
+    padding: 40px 0;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* =================================================== */
+/* ==   UPDATED & THEME-INTEGRATED STYLES           == */
+/* =================================================== */
+
+/* --- Section Title (Shared Style) --- */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+/* --- Game Categories Section (Font Awesome Icons) --- */
+.game-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.category-item {
+    background-color: var(--surface-dark);
+    padding: 25px 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    flex-basis: 200px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+}
+
+.category-item i {
+    font-size: 3rem;
+    color: var(--accent-purple);
+    margin-bottom: 1rem;
+}
+
+.category-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+/* --- Featured Game Categories (Images) --- */
+.provider-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.provider-logos img {
+    /* FIX: Set a max-width and let height be auto to prevent stretching */
+    max-width: 250px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* THEME-INTEGRATED HOVER EFFECT */
+.provider-logos img:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: var(--primary-gold-start);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        /* Would need JS for a mobile menu toggle */
+    }
+
+    .intro-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .category-item {
+        flex-basis: 150px;
+        /* Make icon categories a bit smaller */
+    }
+
+    .provider-logos img {
+        max-width: 200px;
+        /* Make image categories smaller */
+    }
+
+    .site-main {
+        padding: 20px 0;
+    }
+}
