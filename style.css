@@ -1,15 +1,17 @@
-/* ---  General & Root Styles --- */
+/*
+====================================
+CM8 Online Casino Stylesheet
+====================================
+*/
+
+/* --- 1. Global Styles & Variables --- */
 :root {
-    --primary-gold-start: #FFD700;
-    --primary-gold-end: #FFA500;
-    --accent-purple: #8A2BE2;
-    --bg-dark: #0F111A;
-    --surface-dark: #1A1D2C;
-    --surface-darker: #131520;
-    --text-light: #F0F8FF;
-    --text-muted: #A9A9A9;
-    --border-color: #2a2d41;
-    --font-family: 'Poppins', sans-serif;
+    --color-primary: #FFD700; /* Gold for accents, buttons, and highlights */
+    --color-secondary: #ffffff; /* White for text */
+    --color-dark: #0a0a0a; /* Deep black for background */
+    --color-medium: #1a1a1a; /* Lighter black for cards and sections */
+    --color-light-gray: #b3b3b3; /* Gray for less important text */
+    --font-main: 'Poppins', sans-serif;
 }
 
 * {
@@ -18,69 +20,110 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: var(--font-family);
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    background-image: radial-gradient(circle at 50% 0%, rgba(35, 39, 62, 0.5), transparent 60%);
+    font-family: var(--font-main);
+    background-color: var(--color-dark);
+    color: var(--color-secondary);
+    line-height: 1.6;
 }
 
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
+    color: var(--color-secondary);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* --- Buttons --- */
+a:hover {
+    color: var(--color-primary);
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.8rem; font-weight: 700; }
+h2 { font-size: 2.2rem; font-weight: 600; }
+h3 { font-size: 1.5rem; font-weight: 500; }
+h4 { font-size: 1.2rem; font-weight: 500; }
+
+.section-title {
+    text-align: center;
+    color: var(--color-primary);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- 2. Button Styles --- */
 .btn {
     display: inline-block;
-    padding: 10px 24px;
-    border-radius: 50px;
-    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
+    text-align: center;
     border: 2px solid transparent;
-}
-
-.btn.large {
-    padding: 14px 32px;
-    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, var(--primary-gold-start), var(--primary-gold-end));
-    color: #000;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    border-color: var(--color-primary);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+    background-color: #ffc400;
+    border-color: #ffc400;
+    color: var(--color-dark);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
     background-color: transparent;
-    border: 2px solid var(--border-color);
-    color: var(--text-light);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .btn-secondary:hover {
-    background-color: var(--border-color);
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    transform: translateY(-2px);
 }
 
-/* --- Header --- */
+.btn.large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+
+/* --- 3. Header --- */
 .site-header {
-    background: rgba(15, 17, 26, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 15px 0;
-    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
 }
 
 .site-header .container {
@@ -89,204 +132,373 @@ a {
     align-items: center;
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
+.site-header .logo img {
+    width: 80px;
+    border-radius: 15px;
+    border: 2px solid yellow
 }
 
 .main-nav {
     display: flex;
-    gap: 30px;
+    gap: 2rem;
 }
 
 .main-nav a {
-    color: var(--text-muted);
     font-weight: 500;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    position: relative;
 }
 
-.main-nav a:hover {
-    color: #fff;
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
 }
 
 .header-actions {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
-/* --- Main Content --- */
-.site-main {
-    padding: 40px 0;
-}
-
-.hero-image-container {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    margin-bottom: 40px;
+/* --- 4. Main Content --- */
+.site-main .container > * {
+    margin-bottom: 4rem;
 }
 
 .hero-image-container img {
     width: 100%;
-    display: block;
+    border-radius: 10px;
+    margin-top: 2rem;
 }
 
 .intro-text {
     text-align: center;
-    margin-bottom: 60px;
-}
-
-.intro-text h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    line-height: 1.2;
-    background: linear-gradient(45deg, var(--primary-gold-start), #fff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .intro-text p {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 1.2rem;
+    color: var(--color-light-gray);
 }
 
-.action-panel.final-cta {
-    background-color: var(--surface-darker);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 40px;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.final-cta h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.final-cta p {
-    color: var(--text-muted);
-    margin-bottom: 25px;
-    font-size: 1.1rem;
-}
-
-/* --- Footer --- */
-.site-footer {
-    padding: 40px 0;
-    margin-top: 40px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    border-top: 1px solid var(--border-color);
-}
-
-/* =================================================== */
-/* ==   UPDATED & THEME-INTEGRATED STYLES           == */
-/* =================================================== */
-
-/* --- Section Title (Shared Style) --- */
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-top: 60px;
-    margin-bottom: 40px;
-}
-
-/* --- Game Categories Section (Font Awesome Icons) --- */
+/* --- 5. Game Categories & Grids --- */
 .game-categories {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
 }
 
 .category-item {
-    background-color: var(--surface-dark);
-    padding: 25px 30px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    flex-basis: 200px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    background-color: var(--color-medium);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .category-item:hover {
     transform: translateY(-5px);
-    border-color: var(--accent-purple);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-.category-item i {
-    font-size: 3rem;
-    color: var(--accent-purple);
-    margin-bottom: 1rem;
+.category-item img {
+    width: 100%;
+    height: auto;
 }
 
 .category-item h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-light);
+    padding: 1rem;
+    margin: 0;
+    color: var(--color-primary);
 }
 
-/* --- Featured Game Categories (Images) --- */
-.provider-logos {
-    display: flex;
-    justify-content: center;
+/* --- 6. Promo & CTA Sections --- */
+.promo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px 0;
+    gap: 2rem;
+    background-color: var(--color-medium);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.promo-content h2 {
+    color: var(--color-primary);
+}
+
+.promo-content p {
+    margin-bottom: 2rem;
+    color: var(--color-light-gray);
+}
+
+.promo-image img {
+    border-radius: 10px;
+}
+
+.provider-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    align-items: center;
 }
 
 .provider-logos img {
-    /* FIX: Set a max-width and let height be auto to prevent stretching */
-    max-width: 250px;
-    height: auto;
-    border-radius: 12px;
-    border: 2px solid var(--border-color);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: brightness(0.8);
+}
+
+.provider-logos img:hover {
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+
+/* --- 7. Why Choose Us Section --- */
+.why-choose-us {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.feature-item {
+    background-color: var(--color-medium);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: var(--color-light-gray);
+}
+
+/* --- 8. Popular Games Section --- */
+.popular-games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.game-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
     cursor: pointer;
 }
 
-/* THEME-INTEGRATED HOVER EFFECT */
-.provider-logos img:hover {
-    transform: translateY(-10px) scale(1.05);
-    border-color: var(--primary-gold-start);
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+.game-card img {
+    transition: transform 0.4s ease;
+}
+
+.game-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.game-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h4 {
+    margin: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.game-card:hover .overlay h4 {
+    transform: translateY(0);
+}
+
+/* --- 9. Testimonials --- */
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: var(--color-medium);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-primary);
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    color: var(--color-light-gray);
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0;
+}
+
+.testimonial-card cite {
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+/* --- 10. Final CTA Panel --- */
+.final-cta {
+    background: linear-gradient(45deg, var(--color-primary), #ffc400);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.final-cta h3 {
+    font-size: 2.5rem;
+}
+
+.final-cta .btn-primary {
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+    border-color: var(--color-dark);
+}
+
+.final-cta .btn-primary:hover {
+    background-color: #222;
+    color: var(--color-primary);
 }
 
 
-/* --- Responsive Design --- */
+/* --- 11. Footer --- */
+.site-footer {
+    background-color: var(--color-medium);
+    padding-top: 4rem;
+    margin-top: 4rem;
+    color: var(--color-light-gray);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h4 {
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--color-light-gray);
+}
+
+.footer-column a:hover {
+    color: var(--color-primary);
+    padding-left: 5px;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.payment-methods i {
+    color: var(--color-light-gray);
+    transition: color 0.3s ease;
+}
+
+.payment-methods i:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* --- 12. Media Queries for Responsiveness --- */
+
+/* For Tablets */
 @media (max-width: 992px) {
-    .intro-text h1 {
-        font-size: 2.5rem;
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 2rem; }
+
+    .main-nav, .header-actions {
+        /* In a real project, this would be a hamburger menu. For now, we hide it. */
+        display: none;
+    }
+    
+    .why-choose-us {
+        grid-template-columns: 1fr;
+    }
+    
+    .promo-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .promo-image {
+        order: -1; /* Puts the image on top on smaller screens */
     }
 }
 
+/* For Mobile Phones */
 @media (max-width: 768px) {
-    .main-nav {
-        display: none;
-        /* Would need JS for a mobile menu toggle */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    .section-title { margin-top: 3rem; }
+
+    .site-header .container {
+        justify-content: center; /* Center the logo when nav is hidden */
+    }
+    
+    .testimonials {
+        grid-template-columns: 1fr;
     }
 
-    .intro-text h1 {
-        font-size: 2.2rem;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .category-item {
-        flex-basis: 150px;
-        /* Make icon categories a bit smaller */
+    .footer-column a:hover {
+        padding-left: 0;
     }
-
-    .provider-logos img {
-        max-width: 200px;
-        /* Make image categories smaller */
-    }
-
-    .site-main {
-        padding: 20px 0;
+    
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

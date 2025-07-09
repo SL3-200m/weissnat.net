@@ -1,0 +1,17 @@
+# robots.txt for weissnat.net
+
+User-agent: *
+Allow: /
+
+# Disallow specific paths that might be for internal use or user-specific data
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /profile/
+Disallow: /settings/
+Disallow: /login/
+Disallow: /register/
+Disallow: /support-tickets/
+Disallow: /affiliate/
+
+# Path to your sitemap
+Sitemap: https://www.weissnat.net/sitemap.xml
