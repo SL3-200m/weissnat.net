@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://www.weissnat.net/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/games/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.9</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/promotions/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/vip/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/support/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.7</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/slots/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/live-casino/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/sportsbook/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/jackpots/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://www.weissnat.net/poker/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.7</priority>
-   </url>
-    <url>
-      <loc>https://www.weissnat.net/table-games/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.7</priority>
-   </url>
-    <url>
-      <loc>https://www.weissnat.net/about-us/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.6</priority>
-   </url>
-    <url>
-      <loc>https://www.weissnat.net/terms-conditions/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.6</priority>
-   </url>
-    <url>
-      <loc>https://www.weissnat.net/responsible-gaming/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.6</priority>
-   </url>
-    <url>
-      <loc>https://www.weissnat.net/contact-support/</loc>
-      <lastmod>2025-07-09T07:30:00+00:00</lastmod>
-      <priority>0.6</priority>
-   </url>
+
+  <!-- 
+  Sitemap for CM8 Online Casino (https://www.weissnat.net/)
+  Last Updated: 2024-05-21 
+  NOTE: The <lastmod> date should be updated when the page content is changed.
+  -->
+
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://www.weissnat.net/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Primary Content Pages -->
+  <url>
+    <loc>https://www.weissnat.net/games/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.weissnat.net/promotions/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.weissnat.net/sportsbook/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.weissnat.net/vip/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Specific Promotion Pages -->
+  <url>
+    <loc>https://www.weissnat.net/promotions/welcome-bonus/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Informational & Support Pages -->
+  <url>
+    <loc>https://www.weissnat.net/support/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.weissnat.net/about-us/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.weissnat.net/terms-conditions/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.weissnat.net/responsible-gaming/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
