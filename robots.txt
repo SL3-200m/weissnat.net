@@ -1,20 +1,18 @@
 # ===================================================================
-# robots.txt for CM8 Online Casino (https://www.weissnat.net/)
+# robots.txt for CM8 Online Casino (https://www.weissnat.net)
 # ===================================================================
 
+# Allow all content to be crawled by all user agents (bots).
 User-agent: *
-# This rule applies to all web crawlers.
+Allow: /
 
-# Disallow crawlers from accessing pages that are functional,
-# contain no unique SEO value, or are for internal use.
+# Disallow crawling of functional pages that provide no SEO value.
+# This helps focus the crawl budget on your important content pages.
 Disallow: /login/
 Disallow: /register/
-Disallow: /admin/
-Disallow: /account/
-Disallow: /cgi-bin/
+Disallow: /account/ # Disallows any user-specific account pages
+Disallow: /admin/   # Disallows any administrative backend
 
-# It is not necessary to "Allow: /" as this is the default behavior.
-# Crawlers will access anything not explicitly disallowed.
-
-# Provide the location of the XML Sitemap for better crawl discovery.
+# Provide the location of the sitemap to all crawlers.
+# Make sure this URL is the absolute path to your sitemap.
 Sitemap: https://www.weissnat.net/sitemap.xml
